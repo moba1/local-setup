@@ -1,3 +1,6 @@
 brew 'lsd'
 brew 'fd'
 brew 'chezmoi'
+brew 'starship'
+brew 'bat'
+brew 'fish'
