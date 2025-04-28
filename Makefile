@@ -1,5 +1,8 @@
 .PHONY: all
 all: setup-homebrew setup-dotfiles
+	@if ! which devbox >/dev/null; then \
+		printf "\033[1;33mWe recommend to install Devbox\033[0m\n"; \
+	fi
 
 .PHONY: setup-homebrew
 setup-homebrew: has-homebrew
@@ -13,3 +16,4 @@ has-homebrew:
 setup-dotfiles:
 	chezmoi init https://github.com/moba1/dotfiles
 	chezmoi apply
+
