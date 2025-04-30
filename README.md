@@ -1,3 +1,5 @@
+![test workflow](https://github.com/moba1/local-setup/actions/workflows/ci.yaml/badge.svg)
+
 ## Need
 prepare following commands or packages:
 
