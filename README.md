@@ -6,7 +6,7 @@ prepare following commands or packages:
 
 ## Quick start
 
-write following contents to `~/.config/chezmoi/chezmoi.toml`
+write [chezmoi](https://www.chezmoi.io/) config to `~/.config/chezmoi/chezmoi.toml`
 
 ```toml
 [data.git]
