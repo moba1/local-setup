@@ -1,6 +1,11 @@
 name: test
-run-name: test dotfile creation wortkflow
-on: [push]
+run-name: test dotfile creation workflow
+on:
+  push:
+    paths:
+      - Brewfile
+      - Makefile
+      - .github/workflows/ci.yaml
 jobs:
   test:
     runs-on: ubuntu-latest
