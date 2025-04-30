@@ -1,0 +1,18 @@
+name: test
+run-name: test dotfile creation wortkflow
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: write chezmoi config
+        run: |
+          mkdir -p ~/.config/chezmoi
+          echo '[data.git]' > ~/.config/chezmoi/chezmoi.toml
+          echo "default_name = \"$(git --no-pager log --format=format:'%an' -n 1)\"" >> ~/.config/chezmoi/chezmoi.toml
+          echo "default_email = \"$(git --no-pager log --format=format:'%ae' -n 1)\"" >> ~/.config/chezmoi/chezmoi.toml
+      - name: setup test
+        run: |
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          make
