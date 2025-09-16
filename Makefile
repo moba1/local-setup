@@ -14,6 +14,5 @@ has-homebrew:
 
 .PHONY: setup-dotfiles
 setup-dotfiles:
-	chezmoi init https://github.com/moba1/dotfiles
-	chezmoi apply
+	yadm clone https://github.com/moba1/dotfiles
 
